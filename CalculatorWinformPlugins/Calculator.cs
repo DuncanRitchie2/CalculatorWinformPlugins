@@ -27,10 +27,15 @@ namespace CalculatorWinformPlugins
 
         }
 
+        private void GenericNumberClick(int x)
+        {
+            String xString = "" + x;
+            display.Text = display.Text == "0" || display.Text == null ? xString : display.Text + xString;
+        }
+
         private void n1_Click(object sender, EventArgs e)
         {
-            String x = "1";
-            display.Text = display.Text == "0" || display.Text == null ? x : display.Text + x;
+            GenericNumberClick(1);
         }
     }
 }
