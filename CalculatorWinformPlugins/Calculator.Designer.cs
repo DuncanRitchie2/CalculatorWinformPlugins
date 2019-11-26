@@ -77,7 +77,7 @@
             this.n2.TabIndex = 1;
             this.n2.Text = "2";
             this.n2.UseVisualStyleBackColor = false;
-            this.n2.Click += new System.EventHandler(this.button1_Click);
+            this.n2.Click += new System.EventHandler(this.n2_Click);
             // 
             // n3
             // 
@@ -89,7 +89,7 @@
             this.n3.TabIndex = 1;
             this.n3.Text = "3";
             this.n3.UseVisualStyleBackColor = false;
-            this.n3.Click += new System.EventHandler(this.button1_Click);
+            this.n3.Click += new System.EventHandler(this.n3_Click);
             // 
             // n4
             // 
@@ -101,7 +101,7 @@
             this.n4.TabIndex = 1;
             this.n4.Text = "4";
             this.n4.UseVisualStyleBackColor = false;
-            this.n4.Click += new System.EventHandler(this.button1_Click);
+            this.n4.Click += new System.EventHandler(this.n4_Click);
             // 
             // n5
             // 
@@ -113,7 +113,7 @@
             this.n5.TabIndex = 1;
             this.n5.Text = "5";
             this.n5.UseVisualStyleBackColor = false;
-            this.n5.Click += new System.EventHandler(this.button1_Click);
+            this.n5.Click += new System.EventHandler(this.n5_Click);
             // 
             // n6
             // 
@@ -125,7 +125,7 @@
             this.n6.TabIndex = 1;
             this.n6.Text = "6";
             this.n6.UseVisualStyleBackColor = false;
-            this.n6.Click += new System.EventHandler(this.button1_Click);
+            this.n6.Click += new System.EventHandler(this.n6_Click);
             // 
             // n7
             // 
@@ -137,7 +137,7 @@
             this.n7.TabIndex = 1;
             this.n7.Text = "7";
             this.n7.UseVisualStyleBackColor = false;
-            this.n7.Click += new System.EventHandler(this.button1_Click);
+            this.n7.Click += new System.EventHandler(this.n7_Click);
             // 
             // n8
             // 
@@ -149,7 +149,7 @@
             this.n8.TabIndex = 1;
             this.n8.Text = "8";
             this.n8.UseVisualStyleBackColor = false;
-            this.n8.Click += new System.EventHandler(this.button1_Click);
+            this.n8.Click += new System.EventHandler(this.n8_Click);
             // 
             // n9
             // 
@@ -161,7 +161,7 @@
             this.n9.TabIndex = 1;
             this.n9.Text = "9";
             this.n9.UseVisualStyleBackColor = false;
-            this.n9.Click += new System.EventHandler(this.button1_Click);
+            this.n9.Click += new System.EventHandler(this.n9_Click);
             // 
             // n0
             // 
@@ -173,7 +173,7 @@
             this.n0.TabIndex = 1;
             this.n0.Text = "0";
             this.n0.UseVisualStyleBackColor = false;
-            this.n0.Click += new System.EventHandler(this.button1_Click);
+            this.n0.Click += new System.EventHandler(this.n0_Click);
             // 
             // Calculator
             // 
