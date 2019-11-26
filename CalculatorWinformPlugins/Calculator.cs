@@ -13,7 +13,6 @@ namespace CalculatorWinformPlugins
 {
     public partial class Calculator : Form
     {
-        [Flags]
         public enum Operation { Plus, Minus, Multiply, Divide };
         Operation operation;
         double formerNum;
@@ -23,14 +22,17 @@ namespace CalculatorWinformPlugins
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Calculator_Load(object sender, EventArgs e)
         {
-
+            LinkLabel.Link link = new LinkLabel.Link();
+            link.LinkData = "https://www.duncanritchie.co.uk/";
+            footerLink.Links.Add(link);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void footerLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            footerLink.LinkVisited = true;
+            System.Diagnostics.Process.Start(e.Link.LinkData as string);
         }
 
         private void GenericNumberClick(int x)

@@ -48,8 +48,8 @@
             this.equals = new System.Windows.Forms.Button();
             this.point = new System.Windows.Forms.Button();
             this.footerMadeBy = new System.Windows.Forms.TextBox();
-            this.footerUrl = new System.Windows.Forms.TextBox();
             this.errorMessage = new System.Windows.Forms.TextBox();
+            this.footerLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // display
@@ -310,22 +310,6 @@
             this.footerMadeBy.Text = "Made by Duncan Ritchie, 2019/11/26";
             this.footerMadeBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // footerUrl
-            // 
-            this.footerUrl.AccessibleName = "Footer Part 1";
-            this.footerUrl.BackColor = System.Drawing.SystemColors.Control;
-            this.footerUrl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.footerUrl.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerUrl.Location = new System.Drawing.Point(10, 568);
-            this.footerUrl.Multiline = true;
-            this.footerUrl.Name = "footerUrl";
-            this.footerUrl.ReadOnly = true;
-            this.footerUrl.Size = new System.Drawing.Size(399, 32);
-            this.footerUrl.TabIndex = 2;
-            this.footerUrl.TabStop = false;
-            this.footerUrl.Text = "www.duncanritchie.co.uk";
-            this.footerUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // errorMessage
             // 
             this.errorMessage.AccessibleDescription = "Error message (if any)";
@@ -343,13 +327,31 @@
             this.errorMessage.TabStop = false;
             this.errorMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // footerLink
+            // 
+            this.footerLink.AccessibleDescription = "Link to my website";
+            this.footerLink.AccessibleName = "Link";
+            this.footerLink.ActiveLinkColor = System.Drawing.Color.Navy;
+            this.footerLink.AutoSize = true;
+            this.footerLink.Font = new System.Drawing.Font("Candara", 10.8F);
+            this.footerLink.Location = new System.Drawing.Point(8, 566);
+            this.footerLink.MinimumSize = new System.Drawing.Size(399, 0);
+            this.footerLink.Name = "footerLink";
+            this.footerLink.Size = new System.Drawing.Size(399, 23);
+            this.footerLink.TabIndex = 4;
+            this.footerLink.TabStop = true;
+            this.footerLink.Text = "www.duncanritchie.co.uk";
+            this.footerLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.footerLink.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.footerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(footerLink_LinkClicked);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 606);
+            this.Controls.Add(this.footerLink);
             this.Controls.Add(this.errorMessage);
-            this.Controls.Add(this.footerUrl);
             this.Controls.Add(this.footerMadeBy);
             this.Controls.Add(this.divide);
             this.Controls.Add(this.minus);
@@ -374,7 +376,7 @@
             this.MaximizeBox = false;
             this.Name = "Calculator";
             this.Text = "Duncan’s Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,8 +403,8 @@
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button point;
         private System.Windows.Forms.TextBox footerMadeBy;
-        private System.Windows.Forms.TextBox footerUrl;
         private System.Windows.Forms.TextBox errorMessage;
+        private System.Windows.Forms.LinkLabel footerLink;
     }
 }
 
