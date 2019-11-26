@@ -12,6 +12,11 @@ namespace CalculatorWinformPlugins
 {
     public partial class Calculator : Form
     {
+        [Flags]
+        public enum Operation { Plus, Minus, Multiply, Divide };
+        Operation operation;
+        double formerNum;
+
         public Calculator()
         {
             InitializeComponent();
@@ -81,6 +86,47 @@ namespace CalculatorWinformPlugins
         private void n0_Click(object sender, EventArgs e)
         {
             GenericNumberClick(0);
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            display.Text = "0";
+        }
+
+        private void point_Click(object sender, EventArgs e)
+        {
+            string xString = ".";
+            //// Delete any existing decimal point in the display.
+            display.Text = display.Text.Replace(xString, "");
+            //// Add the point to the end of the display.
+            display.Text = display.Text == "0" || display.Text == null ? "0" + xString : display.Text + xString;
+        }
+
+        private void GenericOperatorClick(Operation newOperation)
+        {
+            formerNum = Convert.ToDouble(display.Text);
+            display.Text = "";
+            operation = newOperation;
+        }
+
+        private void plus_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.Plus);
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.Minus);
+        }
+
+        private void multiply_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.Multiply);
+        }
+
+        private void divide_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.Divide);
         }
     }
 }
