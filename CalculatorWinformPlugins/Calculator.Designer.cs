@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.display = new System.Windows.Forms.TextBox();
             this.n1 = new System.Windows.Forms.Button();
             this.n2 = new System.Windows.Forms.Button();
@@ -46,6 +47,9 @@
             this.divide = new System.Windows.Forms.Button();
             this.equals = new System.Windows.Forms.Button();
             this.point = new System.Windows.Forms.Button();
+            this.footerMadeBy = new System.Windows.Forms.TextBox();
+            this.footerUrl = new System.Windows.Forms.TextBox();
+            this.errorMessage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // display
@@ -57,7 +61,7 @@
             this.display.Location = new System.Drawing.Point(12, 13);
             this.display.Name = "display";
             this.display.ReadOnly = true;
-            this.display.Size = new System.Drawing.Size(776, 64);
+            this.display.Size = new System.Drawing.Size(399, 64);
             this.display.TabIndex = 0;
             this.display.Text = "0";
             this.display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -274,7 +278,7 @@
             this.equals.TabIndex = 1;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
-            this.equals.Click += new System.EventHandler(this.n0_Click);
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // point
             // 
@@ -290,11 +294,55 @@
             this.point.UseVisualStyleBackColor = false;
             this.point.Click += new System.EventHandler(this.point_Click);
             // 
+            // footerMadeBy
+            // 
+            this.footerMadeBy.AccessibleName = "Footer Part 1";
+            this.footerMadeBy.BackColor = System.Drawing.SystemColors.Control;
+            this.footerMadeBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.footerMadeBy.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerMadeBy.Location = new System.Drawing.Point(10, 543);
+            this.footerMadeBy.Multiline = true;
+            this.footerMadeBy.Name = "footerMadeBy";
+            this.footerMadeBy.Size = new System.Drawing.Size(399, 32);
+            this.footerMadeBy.TabIndex = 2;
+            this.footerMadeBy.Text = "Made by Duncan Ritchie, 2019/11/26";
+            this.footerMadeBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // footerUrl
+            // 
+            this.footerUrl.AccessibleName = "Footer Part 1";
+            this.footerUrl.BackColor = System.Drawing.SystemColors.Control;
+            this.footerUrl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.footerUrl.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerUrl.Location = new System.Drawing.Point(10, 568);
+            this.footerUrl.Multiline = true;
+            this.footerUrl.Name = "footerUrl";
+            this.footerUrl.Size = new System.Drawing.Size(399, 32);
+            this.footerUrl.TabIndex = 2;
+            this.footerUrl.Text = "www.duncanritchie.co.uk";
+            this.footerUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // errorMessage
+            // 
+            this.errorMessage.BackColor = System.Drawing.SystemColors.Control;
+            this.errorMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorMessage.Font = new System.Drawing.Font("Kelly Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.errorMessage.Location = new System.Drawing.Point(12, 492);
+            this.errorMessage.Multiline = true;
+            this.errorMessage.Name = "errorMessage";
+            this.errorMessage.Size = new System.Drawing.Size(399, 22);
+            this.errorMessage.TabIndex = 3;
+            this.errorMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.ClientSize = new System.Drawing.Size(425, 606);
+            this.Controls.Add(this.errorMessage);
+            this.Controls.Add(this.footerUrl);
+            this.Controls.Add(this.footerMadeBy);
             this.Controls.Add(this.divide);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.multiply);
@@ -313,8 +361,11 @@
             this.Controls.Add(this.n2);
             this.Controls.Add(this.n1);
             this.Controls.Add(this.display);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Calculator";
-            this.Text = "Form1";
+            this.Text = "Duncan’s Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -341,6 +392,9 @@
         private System.Windows.Forms.Button divide;
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button point;
+        private System.Windows.Forms.TextBox footerMadeBy;
+        private System.Windows.Forms.TextBox footerUrl;
+        private System.Windows.Forms.TextBox errorMessage;
     }
 }
 

@@ -36,6 +36,7 @@ namespace CalculatorWinformPlugins
         {
             String xString = "" + x;
             display.Text = display.Text == "0" || display.Text == null ? xString : display.Text + xString;
+            errorMessage.Text = "";
         }
 
         private void n1_Click(object sender, EventArgs e)
@@ -90,6 +91,7 @@ namespace CalculatorWinformPlugins
 
         private void clear_Click(object sender, EventArgs e)
         {
+            //formerNum = 0;
             display.Text = "0";
         }
 
@@ -106,6 +108,7 @@ namespace CalculatorWinformPlugins
         {
             formerNum = Convert.ToDouble(display.Text);
             display.Text = "";
+            errorMessage.Text = "";
             operation = newOperation;
         }
 
@@ -127,6 +130,50 @@ namespace CalculatorWinformPlugins
         private void divide_Click(object sender, EventArgs e)
         {
             GenericOperatorClick(Operation.Divide);
+        }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            double latterNum;
+            double result;
+            try
+            {
+                latterNum = Convert.ToDouble(display.Text);
+            }
+            catch
+            {
+                latterNum = formerNum;
+            }
+            // result is overruled by switch block.
+            result = latterNum;
+
+            switch (operation)
+            {
+                case Operation.Plus:
+                    result = formerNum + latterNum;
+                    break;
+                case Operation.Minus:
+                    result = formerNum - latterNum;
+                    break;
+                case Operation.Multiply:
+                    result = formerNum * latterNum;
+                    break;
+                case Operation.Divide:
+                    if (latterNum == 0)
+                    {
+                        errorMessage.Text = "Cannot divide by zero.";
+                    }
+                    else
+                    {
+                        result = formerNum / latterNum;
+                    }
+                    break;
+                default:
+                    errorMessage.Text = "The operation selected is not allowed.";
+                    break;
+            }
+
+            display.Text = result.ToString();
         }
     }
 }
