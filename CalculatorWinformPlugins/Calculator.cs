@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -104,12 +105,38 @@ namespace CalculatorWinformPlugins
             display.Text = display.Text == "0" || display.Text == null ? "0" + xString : display.Text + xString;
         }
 
+        private void CorrectDisplay()
+        {
+            try
+            {
+                Convert.ToDouble(display.Text);
+            } catch
+            {
+                string oldDisplayText = display.Text;
+                //// The below code is experimental.
+                string pattern = @"(([1-9]\d*)|0)(\.\d+)?";
+                if (Regex.Match(display.Text, pattern).Value == "")
+                {
+                    display.Text = "0" + display.Text;
+                }
+                display.Text = Regex.Match(display.Text, pattern).Value;
+                errorMessage.Text = String.Format("Your input {0} was parsed as {1}", oldDisplayText, display.Text);
+            }
+        }
+
         private void GenericOperatorClick(Operation newOperation)
         {
-            formerNum = Convert.ToDouble(display.Text);
-            display.Text = "";
-            errorMessage.Text = "";
-            operation = newOperation;
+            try
+            {
+                formerNum = Convert.ToDouble(display.Text);
+                display.Text = "";
+                errorMessage.Text = "";
+                operation = newOperation;
+            }
+            catch
+            {
+                CorrectDisplay();
+            }
         }
 
         private void plus_Click(object sender, EventArgs e)
@@ -134,16 +161,21 @@ namespace CalculatorWinformPlugins
 
         private void equals_Click(object sender, EventArgs e)
         {
-            double latterNum;
+            double latterNum = formerNum;
             double result;
-            try
+            if (display.Text != "")
             {
-                latterNum = Convert.ToDouble(display.Text);
+                try
+                {
+                    CorrectDisplay();
+                    latterNum = Convert.ToDouble(display.Text);
+                }
+                catch
+                {
+                    errorMessage.Text = "Something went really wrong";
+                }
             }
-            catch
-            {
-                latterNum = formerNum;
-            }
+            
             // result is overruled by switch block.
             result = latterNum;
 

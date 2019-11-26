@@ -60,9 +60,9 @@
             this.display.Font = new System.Drawing.Font("Kelly Slab", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.display.Location = new System.Drawing.Point(12, 13);
             this.display.Name = "display";
-            this.display.ReadOnly = true;
             this.display.Size = new System.Drawing.Size(399, 64);
             this.display.TabIndex = 0;
+            this.display.TabStop = false;
             this.display.Text = "0";
             this.display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -303,8 +303,10 @@
             this.footerMadeBy.Location = new System.Drawing.Point(10, 543);
             this.footerMadeBy.Multiline = true;
             this.footerMadeBy.Name = "footerMadeBy";
+            this.footerMadeBy.ReadOnly = true;
             this.footerMadeBy.Size = new System.Drawing.Size(399, 32);
             this.footerMadeBy.TabIndex = 2;
+            this.footerMadeBy.TabStop = false;
             this.footerMadeBy.Text = "Made by Duncan Ritchie, 2019/11/26";
             this.footerMadeBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -317,22 +319,28 @@
             this.footerUrl.Location = new System.Drawing.Point(10, 568);
             this.footerUrl.Multiline = true;
             this.footerUrl.Name = "footerUrl";
+            this.footerUrl.ReadOnly = true;
             this.footerUrl.Size = new System.Drawing.Size(399, 32);
             this.footerUrl.TabIndex = 2;
+            this.footerUrl.TabStop = false;
             this.footerUrl.Text = "www.duncanritchie.co.uk";
             this.footerUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // errorMessage
             // 
+            this.errorMessage.AccessibleDescription = "Error message (if any)";
+            this.errorMessage.AccessibleName = "Error message (if any)";
             this.errorMessage.BackColor = System.Drawing.SystemColors.Control;
             this.errorMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.errorMessage.Font = new System.Drawing.Font("Kelly Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.errorMessage.Location = new System.Drawing.Point(12, 492);
+            this.errorMessage.Location = new System.Drawing.Point(12, 457);
             this.errorMessage.Multiline = true;
             this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(399, 22);
+            this.errorMessage.ReadOnly = true;
+            this.errorMessage.Size = new System.Drawing.Size(399, 80);
             this.errorMessage.TabIndex = 3;
+            this.errorMessage.TabStop = false;
             this.errorMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Calculator
