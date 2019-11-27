@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF26A785-92C0-4D2E-BBCF-854FEE378C85}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CalculatorWinformPlugins</RootNamespace>
-    <AssemblyName>CalculatorWinformPlugins</AssemblyName>
+    <RootNamespace>CalculatorWinforms</RootNamespace>
+    <AssemblyName>CalculatorWinforms</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
