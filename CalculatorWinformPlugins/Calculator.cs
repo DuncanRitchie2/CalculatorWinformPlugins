@@ -223,7 +223,7 @@ namespace CalculatorWinformPlugins
                 }
             }
             
-            // result is overruled by switch block.
+            // result is overruled by switch block if operation is not Undefined.
             result = latterNum;
 
             switch (operation)
@@ -269,7 +269,11 @@ namespace CalculatorWinformPlugins
                     errorMessage.Text = "The operation selected is not allowed.";
                     break;
             }
-            formerNum = latterNum;
+            //// Setting 'formerNum = latterNum' means 1+==== yields Fibonacci numbers.
+            //// (because 1+(0)=1; (1+1)=2; (2+1)=3; (3+2)=5; (5+3)=8; ...)
+            //// Setting 'formerNum = result' means 1+===== yields powers of 2.
+            //// (because 1+(0)=1; (1+1)=2; (2+2)=4; (4+4)=8; (8+8)=16; ...)
+            formerNum = result;
             display.Text = result.ToString();
         }
     }
