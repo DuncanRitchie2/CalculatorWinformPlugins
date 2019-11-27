@@ -60,10 +60,10 @@
             this.display.AccessibleDescription = "Where numbers are displayed when keyed in or calculated";
             this.display.AccessibleName = "Display";
             this.display.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.display.Font = new System.Drawing.Font("Kelly Slab", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.display.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.display.Location = new System.Drawing.Point(12, 13);
             this.display.Name = "display";
-            this.display.Size = new System.Drawing.Size(399, 64);
+            this.display.Size = new System.Drawing.Size(399, 53);
             this.display.TabIndex = 0;
             this.display.TabStop = false;
             this.display.Text = "0";
@@ -319,7 +319,7 @@
             this.errorMessage.AccessibleName = "Error message (if any)";
             this.errorMessage.BackColor = System.Drawing.SystemColors.Control;
             this.errorMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.errorMessage.Font = new System.Drawing.Font("Kelly Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMessage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.errorMessage.Location = new System.Drawing.Point(12, 511);
             this.errorMessage.Multiline = true;
