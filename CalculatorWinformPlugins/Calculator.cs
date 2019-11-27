@@ -113,11 +113,11 @@ namespace CalculatorWinformPlugins
 
         private void point_Click(object sender, EventArgs e)
         {
-            string xString = ".";
+            string point = ".";
             //// Delete any existing decimal point in the display.
-            display.Text = display.Text.Replace(xString, "");
+            display.Text = display.Text.Replace(point, "");
             //// Add the point to the end of the display.
-            display.Text = display.Text == "0" || display.Text == null ? "0" + xString : display.Text + xString;
+            display.Text = display.Text == "0" || display.Text == null ? "0" + point : display.Text + point;
         }
 
         private void plusMinus_Click(object sender, EventArgs e)
