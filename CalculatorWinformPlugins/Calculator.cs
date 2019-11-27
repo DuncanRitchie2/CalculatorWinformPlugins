@@ -14,8 +14,8 @@ namespace CalculatorWinformPlugins
     public partial class Calculator : Form
     {
         //// Any changes to the Operation enum also need to be implemented in equals_Click().
-        public enum Operation { Plus, Minus, Multiply, Divide, Power, NthRoot };
-        Operation operation;
+        public enum Operation { Undefined, Plus, Minus, Multiply, Divide, Power, NthRoot };
+        Operation operation = Operation.Undefined;
         double formerNum;
         char minusSign = '-';
 
@@ -107,7 +107,8 @@ namespace CalculatorWinformPlugins
 
         private void clear_Click(object sender, EventArgs e)
         {
-            //formerNum = 0;
+            formerNum = 0;
+            operation = Operation.Undefined;
             display.Text = "0";
         }
 
@@ -227,6 +228,8 @@ namespace CalculatorWinformPlugins
 
             switch (operation)
             {
+                case Operation.Undefined:
+                    break;
                 case Operation.Plus:
                     result = formerNum + latterNum;
                     break;
@@ -266,7 +269,7 @@ namespace CalculatorWinformPlugins
                     errorMessage.Text = "The operation selected is not allowed.";
                     break;
             }
-
+            formerNum = latterNum;
             display.Text = result.ToString();
         }
     }
