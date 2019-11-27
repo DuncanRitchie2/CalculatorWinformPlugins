@@ -6,4 +6,5 @@
 CalculatorWinforms/bin/*
 !CalculatorWinforms/bin/Release
 CalculatorWinforms/bin/Release/*
-!CalculatorWinforms/bin/Release/CalculatorWinforms.exe
+## Uncomment this when the .exe is next ready to use after being updated.
+# !CalculatorWinforms/bin/Release/CalculatorWinforms.exe
