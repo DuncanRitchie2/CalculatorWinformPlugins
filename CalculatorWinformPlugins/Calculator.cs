@@ -17,6 +17,7 @@ namespace CalculatorWinformPlugins
         public enum Operation { Plus, Minus, Multiply, Divide, Power, NthRoot };
         Operation operation;
         double formerNum;
+        char minusSign = '-';
 
         public Calculator()
         {
@@ -39,7 +40,18 @@ namespace CalculatorWinformPlugins
         private void GenericNumberClick(int x)
         {
             String xString = "" + x;
-            display.Text = display.Text == "0" || display.Text == null ? xString : display.Text + xString;
+            if (display.Text == "0" || display.Text == null)
+            {
+                display.Text = xString;
+            }
+            else if (display.Text == "" + minusSign + "0")
+            {
+                display.Text = minusSign + xString;
+            }
+            else
+            {
+                display.Text += xString;
+            }
             errorMessage.Text = "";
         }
 
@@ -110,7 +122,6 @@ namespace CalculatorWinformPlugins
 
         private void plusMinus_Click(object sender, EventArgs e)
         {
-            char minusSign = '-';
             if (display.Text.Length > 0 && display.Text[0] == minusSign)
             {
                 display.Text = display.Text.Substring(1, display.Text.Length-1);
@@ -131,7 +142,7 @@ namespace CalculatorWinformPlugins
             {
                 string oldDisplayText = display.Text;
                 //// The below code is experimental.
-                string pattern = @"-?(([1-9]\d*)|0)(\.\d+)?";
+                string pattern = minusSign+@"?(([1-9]\d*)|0)(\.\d+)?";
                 if (Regex.Match(display.Text, pattern).Value == "")
                 {
                     display.Text = "0" + display.Text;
