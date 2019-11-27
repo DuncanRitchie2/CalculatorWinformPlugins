@@ -131,7 +131,7 @@ namespace CalculatorWinformPlugins
             {
                 string oldDisplayText = display.Text;
                 //// The below code is experimental.
-                string pattern = @"(([1-9]\d*)|0)(\.\d+)?";
+                string pattern = @"-?(([1-9]\d*)|0)(\.\d+)?";
                 if (Regex.Match(display.Text, pattern).Value == "")
                 {
                     display.Text = "0" + display.Text;
@@ -163,7 +163,15 @@ namespace CalculatorWinformPlugins
 
         private void minus_Click(object sender, EventArgs e)
         {
-            GenericOperatorClick(Operation.Minus);
+            if (display.Text == "0" || display.Text == "")
+            {
+                plusMinus_Click(sender, e);
+            }
+            else
+            {
+                GenericOperatorClick(Operation.Minus);
+            }
+            
         }
 
         private void multiply_Click(object sender, EventArgs e)
@@ -235,9 +243,12 @@ namespace CalculatorWinformPlugins
                     {
                         errorMessage.Text = "Cannot have a zeroth root.";
                     }
+                    else if (formerNum > 0) {
+                        result = Math.Pow(formerNum, 1 / latterNum);
+                    }
                     else
                     {
-                        result = Math.Pow(formerNum, 1 / latterNum);
+                        result = -1 * Math.Pow(-1 * formerNum, 1 / latterNum);
                     }
                     break;
                 default:
