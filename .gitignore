@@ -1,4 +1,9 @@
 **/.vs
 **/.ionide
-**/bin
 **/obj
+
+!CalculatorWinforms/bin
+CalculatorWinforms/bin/*
+!CalculatorWinforms/bin/Release
+CalculatorWinforms/bin/Release/*
+!CalculatorWinforms/bin/Release/CalculatorWinforms.exe
