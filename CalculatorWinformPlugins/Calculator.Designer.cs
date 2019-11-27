@@ -52,6 +52,7 @@
             this.footerLink = new System.Windows.Forms.LinkLabel();
             this.power = new System.Windows.Forms.Button();
             this.nthRoot = new System.Windows.Forms.Button();
+            this.plusMinus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // display
@@ -375,17 +376,32 @@
             this.nthRoot.UseVisualStyleBackColor = false;
             this.nthRoot.Click += new System.EventHandler(this.nthRoot_Click);
             // 
+            // plusMinus
+            // 
+            this.plusMinus.AccessibleDescription = "Toggle sign of display value";
+            this.plusMinus.AccessibleName = "PlusMinus";
+            this.plusMinus.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.plusMinus.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusMinus.Location = new System.Drawing.Point(174, 418);
+            this.plusMinus.Name = "plusMinus";
+            this.plusMinus.Size = new System.Drawing.Size(75, 75);
+            this.plusMinus.TabIndex = 1;
+            this.plusMinus.Text = "±";
+            this.plusMinus.UseVisualStyleBackColor = false;
+            this.plusMinus.Click += new System.EventHandler(this.plusMinus_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 788);
+            this.ClientSize = new System.Drawing.Size(425, 661);
             this.Controls.Add(this.footerLink);
             this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.footerMadeBy);
             this.Controls.Add(this.divide);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.multiply);
+            this.Controls.Add(this.plusMinus);
             this.Controls.Add(this.point);
             this.Controls.Add(this.nthRoot);
             this.Controls.Add(this.power);
@@ -439,6 +455,7 @@
         private System.Windows.Forms.LinkLabel footerLink;
         private System.Windows.Forms.Button power;
         private System.Windows.Forms.Button nthRoot;
+        private System.Windows.Forms.Button plusMinus;
     }
 }
 

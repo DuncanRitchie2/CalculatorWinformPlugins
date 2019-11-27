@@ -108,6 +108,20 @@ namespace CalculatorWinformPlugins
             display.Text = display.Text == "0" || display.Text == null ? "0" + xString : display.Text + xString;
         }
 
+        private void plusMinus_Click(object sender, EventArgs e)
+        {
+            char minusSign = '-';
+            if (display.Text.Length > 0 && display.Text[0] == minusSign)
+            {
+                display.Text = display.Text.Substring(1, display.Text.Length-1);
+            }
+            else
+            {
+                display.Text = minusSign + display.Text;
+            }
+            if (display.Text != "" + minusSign) { CorrectDisplay(); }
+        }
+
         private void CorrectDisplay()
         {
             try
