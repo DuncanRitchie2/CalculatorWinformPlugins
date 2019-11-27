@@ -13,7 +13,8 @@ namespace CalculatorWinformPlugins
 {
     public partial class Calculator : Form
     {
-        public enum Operation { Plus, Minus, Multiply, Divide };
+        //// Any changes to the Operation enum also need to be implemented in equals_Click().
+        public enum Operation { Plus, Minus, Multiply, Divide, Power, NthRoot };
         Operation operation;
         double formerNum;
 
@@ -161,6 +162,16 @@ namespace CalculatorWinformPlugins
             GenericOperatorClick(Operation.Divide);
         }
 
+        private void power_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.Power);
+        }
+
+        private void nthRoot_Click(object sender, EventArgs e)
+        {
+            GenericOperatorClick(Operation.NthRoot);
+        }
+
         private void equals_Click(object sender, EventArgs e)
         {
             double latterNum = formerNum;
@@ -200,6 +211,19 @@ namespace CalculatorWinformPlugins
                     else
                     {
                         result = formerNum / latterNum;
+                    }
+                    break;
+                case Operation.Power:
+                    result = Math.Pow(formerNum, latterNum);
+                    break;
+                case Operation.NthRoot:
+                    if (latterNum == 0)
+                    {
+                        errorMessage.Text = "Cannot have a zeroth root.";
+                    }
+                    else
+                    {
+                        result = Math.Pow(formerNum, 1 / latterNum);
                     }
                     break;
                 default:

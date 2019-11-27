@@ -50,6 +50,8 @@
             this.footerMadeBy = new System.Windows.Forms.TextBox();
             this.errorMessage = new System.Windows.Forms.TextBox();
             this.footerLink = new System.Windows.Forms.LinkLabel();
+            this.power = new System.Windows.Forms.Button();
+            this.nthRoot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // display
@@ -71,7 +73,7 @@
             this.n1.AccessibleName = "One";
             this.n1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n1.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n1.Location = new System.Drawing.Point(12, 282);
+            this.n1.Location = new System.Drawing.Point(12, 336);
             this.n1.Name = "n1";
             this.n1.Size = new System.Drawing.Size(75, 75);
             this.n1.TabIndex = 1;
@@ -84,7 +86,7 @@
             this.n2.AccessibleName = "Two";
             this.n2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n2.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n2.Location = new System.Drawing.Point(93, 282);
+            this.n2.Location = new System.Drawing.Point(93, 336);
             this.n2.Name = "n2";
             this.n2.Size = new System.Drawing.Size(75, 75);
             this.n2.TabIndex = 1;
@@ -97,7 +99,7 @@
             this.n3.AccessibleName = "Three";
             this.n3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n3.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n3.Location = new System.Drawing.Point(174, 283);
+            this.n3.Location = new System.Drawing.Point(174, 337);
             this.n3.Name = "n3";
             this.n3.Size = new System.Drawing.Size(75, 75);
             this.n3.TabIndex = 1;
@@ -110,7 +112,7 @@
             this.n4.AccessibleName = "Four";
             this.n4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n4.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n4.Location = new System.Drawing.Point(12, 201);
+            this.n4.Location = new System.Drawing.Point(12, 255);
             this.n4.Name = "n4";
             this.n4.Size = new System.Drawing.Size(75, 75);
             this.n4.TabIndex = 1;
@@ -123,7 +125,7 @@
             this.n5.AccessibleName = "Five";
             this.n5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n5.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n5.Location = new System.Drawing.Point(93, 201);
+            this.n5.Location = new System.Drawing.Point(93, 255);
             this.n5.Name = "n5";
             this.n5.Size = new System.Drawing.Size(75, 75);
             this.n5.TabIndex = 1;
@@ -136,7 +138,7 @@
             this.n6.AccessibleName = "Six";
             this.n6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n6.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n6.Location = new System.Drawing.Point(174, 201);
+            this.n6.Location = new System.Drawing.Point(174, 255);
             this.n6.Name = "n6";
             this.n6.Size = new System.Drawing.Size(75, 75);
             this.n6.TabIndex = 1;
@@ -149,7 +151,7 @@
             this.n7.AccessibleName = "Seven";
             this.n7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n7.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n7.Location = new System.Drawing.Point(12, 120);
+            this.n7.Location = new System.Drawing.Point(12, 174);
             this.n7.Name = "n7";
             this.n7.Size = new System.Drawing.Size(75, 75);
             this.n7.TabIndex = 1;
@@ -162,7 +164,7 @@
             this.n8.AccessibleName = "Eight";
             this.n8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n8.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n8.Location = new System.Drawing.Point(93, 120);
+            this.n8.Location = new System.Drawing.Point(93, 174);
             this.n8.Name = "n8";
             this.n8.Size = new System.Drawing.Size(75, 75);
             this.n8.TabIndex = 1;
@@ -175,7 +177,7 @@
             this.n9.AccessibleName = "Nine";
             this.n9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n9.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n9.Location = new System.Drawing.Point(174, 120);
+            this.n9.Location = new System.Drawing.Point(174, 174);
             this.n9.Name = "n9";
             this.n9.Size = new System.Drawing.Size(75, 75);
             this.n9.TabIndex = 1;
@@ -188,7 +190,7 @@
             this.n0.AccessibleName = "Zero";
             this.n0.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.n0.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n0.Location = new System.Drawing.Point(12, 363);
+            this.n0.Location = new System.Drawing.Point(12, 417);
             this.n0.Name = "n0";
             this.n0.Size = new System.Drawing.Size(75, 75);
             this.n0.TabIndex = 1;
@@ -202,7 +204,7 @@
             this.clear.AccessibleName = "Clear";
             this.clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.clear.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(255, 120);
+            this.clear.Location = new System.Drawing.Point(253, 93);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(156, 75);
             this.clear.TabIndex = 1;
@@ -216,7 +218,7 @@
             this.plus.AccessibleName = "Plus";
             this.plus.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.plus.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plus.Location = new System.Drawing.Point(255, 282);
+            this.plus.Location = new System.Drawing.Point(255, 336);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(75, 75);
             this.plus.TabIndex = 1;
@@ -230,7 +232,7 @@
             this.minus.AccessibleName = "Minus";
             this.minus.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.minus.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minus.Location = new System.Drawing.Point(336, 282);
+            this.minus.Location = new System.Drawing.Point(336, 336);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(75, 75);
             this.minus.TabIndex = 1;
@@ -244,7 +246,7 @@
             this.multiply.AccessibleName = "Multiply";
             this.multiply.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.multiply.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiply.Location = new System.Drawing.Point(255, 201);
+            this.multiply.Location = new System.Drawing.Point(255, 255);
             this.multiply.Name = "multiply";
             this.multiply.Size = new System.Drawing.Size(75, 75);
             this.multiply.TabIndex = 1;
@@ -258,7 +260,7 @@
             this.divide.AccessibleName = "Divide";
             this.divide.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.divide.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divide.Location = new System.Drawing.Point(336, 201);
+            this.divide.Location = new System.Drawing.Point(336, 255);
             this.divide.Name = "divide";
             this.divide.Size = new System.Drawing.Size(75, 75);
             this.divide.TabIndex = 1;
@@ -272,7 +274,7 @@
             this.equals.AccessibleName = "Equals";
             this.equals.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.equals.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equals.Location = new System.Drawing.Point(255, 363);
+            this.equals.Location = new System.Drawing.Point(255, 417);
             this.equals.Name = "equals";
             this.equals.Size = new System.Drawing.Size(156, 75);
             this.equals.TabIndex = 1;
@@ -284,9 +286,9 @@
             // 
             this.point.AccessibleDescription = "";
             this.point.AccessibleName = "Point";
-            this.point.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.point.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.point.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.point.Location = new System.Drawing.Point(174, 364);
+            this.point.Location = new System.Drawing.Point(93, 417);
             this.point.Name = "point";
             this.point.Size = new System.Drawing.Size(75, 75);
             this.point.TabIndex = 1;
@@ -300,7 +302,7 @@
             this.footerMadeBy.BackColor = System.Drawing.SystemColors.Control;
             this.footerMadeBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.footerMadeBy.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerMadeBy.Location = new System.Drawing.Point(10, 543);
+            this.footerMadeBy.Location = new System.Drawing.Point(10, 597);
             this.footerMadeBy.Multiline = true;
             this.footerMadeBy.Name = "footerMadeBy";
             this.footerMadeBy.ReadOnly = true;
@@ -318,7 +320,7 @@
             this.errorMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.errorMessage.Font = new System.Drawing.Font("Kelly Slab", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMessage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.errorMessage.Location = new System.Drawing.Point(12, 457);
+            this.errorMessage.Location = new System.Drawing.Point(12, 511);
             this.errorMessage.Multiline = true;
             this.errorMessage.Name = "errorMessage";
             this.errorMessage.ReadOnly = true;
@@ -334,7 +336,7 @@
             this.footerLink.ActiveLinkColor = System.Drawing.Color.Navy;
             this.footerLink.AutoSize = true;
             this.footerLink.Font = new System.Drawing.Font("Candara", 10.8F);
-            this.footerLink.Location = new System.Drawing.Point(8, 566);
+            this.footerLink.Location = new System.Drawing.Point(8, 620);
             this.footerLink.MinimumSize = new System.Drawing.Size(399, 0);
             this.footerLink.Name = "footerLink";
             this.footerLink.Size = new System.Drawing.Size(399, 23);
@@ -343,13 +345,41 @@
             this.footerLink.Text = "www.duncanritchie.co.uk";
             this.footerLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.footerLink.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.footerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(footerLink_LinkClicked);
+            this.footerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.footerLink_LinkClicked);
+            // 
+            // power
+            // 
+            this.power.AccessibleDescription = "";
+            this.power.AccessibleName = "Power";
+            this.power.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.power.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.power.Location = new System.Drawing.Point(255, 174);
+            this.power.Name = "power";
+            this.power.Size = new System.Drawing.Size(75, 75);
+            this.power.TabIndex = 1;
+            this.power.Text = "^";
+            this.power.UseVisualStyleBackColor = false;
+            this.power.Click += new System.EventHandler(this.power_Click);
+            // 
+            // nthRoot
+            // 
+            this.nthRoot.AccessibleDescription = "";
+            this.nthRoot.AccessibleName = "Nth Root";
+            this.nthRoot.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.nthRoot.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nthRoot.Location = new System.Drawing.Point(336, 174);
+            this.nthRoot.Name = "nthRoot";
+            this.nthRoot.Size = new System.Drawing.Size(75, 75);
+            this.nthRoot.TabIndex = 1;
+            this.nthRoot.Text = "ⁿ√";
+            this.nthRoot.UseVisualStyleBackColor = false;
+            this.nthRoot.Click += new System.EventHandler(this.nthRoot_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 606);
+            this.ClientSize = new System.Drawing.Size(425, 788);
             this.Controls.Add(this.footerLink);
             this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.footerMadeBy);
@@ -357,6 +387,8 @@
             this.Controls.Add(this.minus);
             this.Controls.Add(this.multiply);
             this.Controls.Add(this.point);
+            this.Controls.Add(this.nthRoot);
+            this.Controls.Add(this.power);
             this.Controls.Add(this.plus);
             this.Controls.Add(this.equals);
             this.Controls.Add(this.clear);
@@ -405,6 +437,8 @@
         private System.Windows.Forms.TextBox footerMadeBy;
         private System.Windows.Forms.TextBox errorMessage;
         private System.Windows.Forms.LinkLabel footerLink;
+        private System.Windows.Forms.Button power;
+        private System.Windows.Forms.Button nthRoot;
     }
 }
 
