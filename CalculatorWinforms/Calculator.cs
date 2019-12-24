@@ -157,7 +157,7 @@ namespace CalculatorWinformPlugins
         {
             try
             {
-                if (formerNum == 0)
+                if (operation == Operation.Undefined)
                 {
                     formerNum = Convert.ToDouble(display.Text);
                 }
