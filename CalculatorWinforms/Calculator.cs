@@ -157,7 +157,14 @@ namespace CalculatorWinformPlugins
         {
             try
             {
-                formerNum = Convert.ToDouble(display.Text);
+                if (formerNum == 0)
+                {
+                    formerNum = Convert.ToDouble(display.Text);
+                }
+                else
+                {
+                    formerNum = GenericCalculateThatMayThrow(formerNum, Convert.ToDouble(display.Text), operation);
+                }
                 display.Text = "";
                 errorMessage.Text = "";
                 operation = newOperation;
@@ -206,6 +213,51 @@ namespace CalculatorWinformPlugins
             GenericOperatorClick(Operation.NthRoot);
         }
 
+        private double GenericCalculateThatMayThrow(double formerNum, double latterNum, Operation op)
+        {
+            switch (op)
+            {
+                case Operation.Undefined:
+                    break;
+                case Operation.Plus:
+                    return formerNum + latterNum;
+                case Operation.Minus:
+                    return formerNum - latterNum;
+                case Operation.Multiply:
+                    return formerNum * latterNum;
+                case Operation.Divide:
+                    if (latterNum == 0)
+                    {
+                        errorMessage.Text = "Cannot divide by zero.";
+                    }
+                    else
+                    {
+                        return formerNum / latterNum;
+                    }
+                    break;
+                case Operation.Power:
+                    return Math.Pow(formerNum, latterNum);
+                case Operation.NthRoot:
+                    if (latterNum == 0)
+                    {
+                        errorMessage.Text = "Cannot have a zeroth root.";
+                    }
+                    else if (formerNum > 0)
+                    {
+                        return Math.Pow(formerNum, 1 / latterNum);
+                    }
+                    else
+                    {
+                        return -1 * Math.Pow(-1 * formerNum, 1 / latterNum);
+                    }
+                    break;
+                default:
+                    errorMessage.Text = "The operation selected is not allowed.";
+                    break;
+            }
+            throw new Exception();
+        }
+
         private void equals_Click(object sender, EventArgs e)
         {
             double latterNum = formerNum;
@@ -222,52 +274,14 @@ namespace CalculatorWinformPlugins
                     errorMessage.Text = "Something went really wrong";
                 }
             }
-            
-            // result is overruled by switch block if operation is not Undefined.
-            result = latterNum;
 
-            switch (operation)
+            try
             {
-                case Operation.Undefined:
-                    break;
-                case Operation.Plus:
-                    result = formerNum + latterNum;
-                    break;
-                case Operation.Minus:
-                    result = formerNum - latterNum;
-                    break;
-                case Operation.Multiply:
-                    result = formerNum * latterNum;
-                    break;
-                case Operation.Divide:
-                    if (latterNum == 0)
-                    {
-                        errorMessage.Text = "Cannot divide by zero.";
-                    }
-                    else
-                    {
-                        result = formerNum / latterNum;
-                    }
-                    break;
-                case Operation.Power:
-                    result = Math.Pow(formerNum, latterNum);
-                    break;
-                case Operation.NthRoot:
-                    if (latterNum == 0)
-                    {
-                        errorMessage.Text = "Cannot have a zeroth root.";
-                    }
-                    else if (formerNum > 0) {
-                        result = Math.Pow(formerNum, 1 / latterNum);
-                    }
-                    else
-                    {
-                        result = -1 * Math.Pow(-1 * formerNum, 1 / latterNum);
-                    }
-                    break;
-                default:
-                    errorMessage.Text = "The operation selected is not allowed.";
-                    break;
+                result = GenericCalculateThatMayThrow(formerNum, latterNum, operation);
+            }
+            catch
+            {
+                result = latterNum;
             }
             //// Setting 'formerNum = latterNum' means 1+==== yields Fibonacci numbers.
             //// (because 1+(0)=1; (1+1)=2; (2+1)=3; (3+2)=5; (5+3)=8; ...)
